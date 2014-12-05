@@ -1,0 +1,25 @@
+h2{
+  text-align: center;
+  color: red;
+}
+
+div {
+  width: 800px;
+  border-color: blue;
+  border-style: solid;
+  background-color: yellow;
+}
+
+#the_canvas {
+  border-color: black;
+  border-style: solid;
+}
+
+footer {
+  width: 800px;
+  border-style: solid;
+  border-color: black;
+  border-top: 0px;
+  background-color: yellow;
+  font-style: italic;
+}

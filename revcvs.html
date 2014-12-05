@@ -1,0 +1,89 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Ball Dropping HTML/CSS/JS practice">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <title>Ball Drop</title>
+</head>
+<div>
+<body>
+  <header>
+    <h2>The ball drop</h2>
+  </header>
+</div>
+    <canvas id="the_canvas" width="800" height="500"></canvas>
+      <script>
+        var canvas = document.getElementById('the_canvas');
+        var ctx = canvas.getContext('2d');
+        var x = 200;
+        var i = 10;
+        var cd = function(){
+        //  i = i - 10;
+          if(i > 0){
+            x += 10;
+            i--;
+          };
+        //background
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(11, 37, 110, .5)";
+          ctx.fillRect (0, 0, 800, 600);
+          ctx.closePath();
+        //circle
+          ctx.beginPath();
+          ctx.fillStyle = "#99FF00";
+          ctx.arc(300, x, 40, 0, Math.PI*2, true);
+          ctx.fill();
+          ctx.closePath();
+        //pole
+          ctx.beginPath();
+          ctx.fillStyle = "#003333";
+          ctx.fillRect(300, 240, 8, 100);
+          ctx.fill();
+          ctx.closePath();
+        //base of pole
+          ctx.beginPath();
+          ctx.fillStyle = "#000033";
+          ctx.fillRect(250, 340, 110, 20);
+          ctx.fill();
+          ctx.closePath();
+        //building
+          /*ctx.beginPath();
+          ctx.fillStyle = "rgba(78, 46, 10, .8)";
+          ctx.moveTo(100, 360);
+          ctx.lineTo(500, 360);
+          ctx.moveTo(100,360);
+          ctx.lineTo(100,500);
+          ctx.moveTo(500, 360);
+          ctx.lineTo(500,500);
+          ctx.stroke();
+          ctx.closePath();*/
+        //building center
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(67, 53, 6, .4)";
+          ctx.fillRect(100, 360, 400, 150)
+          ctx.fill();
+          ctx.closePath();
+        //window1
+          ctx.beginPath();
+          ctx.fillStyle = "rgb(30, 16, 2)";
+          ctx.fillRect(170, 400, 60, 60);
+          ctx.fill();
+          ctx.closePath();
+        //window2
+          ctx.beginPath();
+          ctx.fillStyle = "rgb(30, 16, 2)";
+          ctx.fillRect(270, 400, 60, 60);
+          ctx.fill();
+          ctx.closePath();
+        //window3
+          ctx.beginPath();
+          ctx.fillStyle = "rgb(30, 16, 2)";
+          ctx.fillRect(370, 400, 60, 60);
+          ctx.fill();
+          ctx.closePath();
+      }
+      setInterval(cd, 1000);
+      </script>
+  </body>
+  <footer>Copyright 2014 and stolen by Alvin</footer>
+</html>
